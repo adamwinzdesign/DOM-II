@@ -70,8 +70,16 @@ newBtn.addEventListener('mouseup', () => {
 });
 
 // mouseenter
+newBtn.addEventListener('mouseenter', () => {
+  reportText.textContent = 'User moved the mouse into the button!'
+});
 
 // mouseleave
+newBtn.addEventListener('mouseout', () => {
+  reportText.textContent = 'User moved the mouse out of the button!'
+});
 
 // online
-
+window.addEventListener('online', () => {
+  reportText.textContent = 'Window is online!';
+});
