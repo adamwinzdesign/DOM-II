@@ -4,9 +4,49 @@
 const testLink = document.createElement('link');
 const head = document.querySelector('head');
 head.append(testLink);
-testLink.href = 'https://fonts.googleapis.com/css?family=Lobster&display=swap';
+testLink.href = 'https://fonts.googleapis.com/css?family=Faster+One|Finger+Paint|Knewave|Lobster|Love+Ya+Like+A+Sister|Monoton|Press+Start+2P|Turret+Road|Unica+One|Vibes&display=swap';
 testLink.rel = 'stylesheet';
 
+// get random font when user clicks on bubbling button
+const randomNumber = Math.floor(Math.random() * 10);
+console.log(randomNumber);
+
+// get Fun Bus in nav
+const logoHead = document.querySelector('.logo-heading');
+// set font based on result of random number
+
+switch(randomNumber) {
+  case 0: 
+    logoHead.style.fontFamily = 'Lobster';
+    break;
+  case 1:
+    logoHead.style.fontFamily = 'Turret Road';
+    break;
+  case 2:
+    logoHead.style.fontFamily = 'Vibes';
+    break;
+  case 3:
+    logoHead.style.fontFamily = 'Monoton';
+    break;
+  case 4:
+    logoHead.style.fontFamily = 'Unica One';
+    break;
+  case 5: 
+    logoHead.style.fontFamily = 'Finger Paint';
+    break;
+  case 6:
+    logoHead.style.fontFamily = 'Press Start 2P';
+    break;
+  case 7:
+    logoHead.style.fontFamily = 'Love Ya Like A Sister';
+    break;
+  case 8:
+    logoHead.style.fontFamily = 'Knewave';
+    break;
+  case 9: 
+    logoHead.style.fontFamily = 'Faster One';
+    break;
+};
 
 // add reporting/messaging div
 const newDiv = document.createElement('div');
@@ -88,6 +128,40 @@ bubbleOuter.addEventListener('click', (event) => {
 bubbleText.addEventListener('click', () => {
   console.log('bubbleText clicked!');
   bubbleText.style.fontFamily = 'Lobster';
+
+  // attempt to set random font for logo-heading
+  switch(randomNumber) {
+    case 0: 
+      logoHead.style.fontFamily = 'Lobster';
+      break;
+    case 1:
+      logoHead.style.fontFamily = 'Turret Road';
+      break;
+    case 2:
+      logoHead.style.fontFamily = 'Vibes';
+      break;
+    case 3:
+      logoHead.style.fontFamily = 'Monoton';
+      break;
+    case 4:
+      logoHead.style.fontFamily = 'Unica One';
+      break;
+    case 5: 
+      logoHead.style.fontFamily = 'Finger Paint';
+      break;
+    case 6:
+      logoHead.style.fontFamily = 'Press Start 2P';
+      break;
+    case 7:
+      logoHead.style.fontFamily = 'Love Ya Like A Sister';
+      break;
+    case 8:
+      logoHead.style.fontFamily = 'Knewave';
+      break;
+    case 9: 
+      logoHead.style.fontFamily = 'Faster One';
+      break;
+  };
 });
 
 // resize
