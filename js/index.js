@@ -148,6 +148,11 @@ window.addEventListener('keyup', () => {
   reportText.textContent = 'User has released a key!';
 });
 
+// click
+newBtn.addEventListener('click', (event) => {
+  event.stopPropagation();
+})
+
 // dblclick
 newBtn.addEventListener('dblclick', (event) => {
   reportText.textContent = 'User doubleclicked!';
@@ -165,6 +170,15 @@ newBtn.addEventListener('mouseup', (event) => {
   reportText.textContent = 'User released the mouse button!';
   event.stopPropagation();
 });
+
+// test to see if we can log all events on newBtn
+// Object.keys(window).forEach(key => {
+//   if (/^on(key|mouse)/.test(key)) {
+//       window.addEventListener(key.slice(2), event => {
+//           console.log(event);
+//       });
+//   }
+// });
 
 //auxclick test to see if it is causing bubbling
 newBtn.addEventListener('auxclick', (event) => {
