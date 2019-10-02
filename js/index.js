@@ -4,7 +4,7 @@
 const testLink = document.createElement('link');
 const head = document.querySelector('head');
 head.append(testLink);
-testLink.href = 'https://fonts.googleapis.com/css?family=Faster+One|Finger+Paint|Knewave|Lobster|Love+Ya+Like+A+Sister|Monoton|Press+Start+2P|Turret+Road|Unica+One|Vibes&display=swap';
+testLink.href = 'https://fonts.googleapis.com/css?family=Faster+One|Finger+Paint|Knewave|Lobster|Love+Ya+Like+A+Sister|Monoton|Ribeye+Marrow|Turret+Road|Unica+One|Vibes&display=swap';
 testLink.rel = 'stylesheet';
 
 // get Fun Bus in nav
@@ -114,7 +114,7 @@ bubbleText.addEventListener('click', () => {
       logoHead.style.fontFamily = 'Finger Paint';
       break;
     case 6:
-      logoHead.style.fontFamily = 'Press Start 2P';
+      logoHead.style.fontFamily = 'Ribeye Marrow';
       break;
     case 7:
       logoHead.style.fontFamily = 'Love Ya Like A Sister';
