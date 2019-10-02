@@ -171,20 +171,6 @@ newBtn.addEventListener('mouseup', (event) => {
   event.stopPropagation();
 });
 
-// test to see if we can log all events on newBtn
-// Object.keys(window).forEach(key => {
-//   if (/^on(key|mouse)/.test(key)) {
-//       window.addEventListener(key.slice(2), event => {
-//           console.log(event);
-//       });
-//   }
-// });
-
-//auxclick test to see if it is causing bubbling
-newBtn.addEventListener('auxclick', (event) => {
-  event.stopPropagation();
-})
-
 // mouseenter
 newBtn.addEventListener('mouseenter', () => {
   reportText.textContent = 'User moved the mouse into the button!'
@@ -203,6 +189,8 @@ window.addEventListener('load', () => {
 // prevent default link behavior
 const stopLink = document.querySelectorAll('.nav-link');
 
-stopLink.forEach(addEventListener('click', (event) => {  
-  event.preventDefault();
-}));
+stopLink.forEach((element) => {
+  element.addEventListener('click', (event) => {  
+      event.preventDefault();
+    });
+});
