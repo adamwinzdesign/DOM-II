@@ -32,7 +32,7 @@ newDiv.prepend(newBtn);
 newDiv.append(textContain);
 textContain.append(reportText);
 newBtn.textContent = 'Click Me!';
-reportText.textContent = 'I\'ll be reporting!';
+// reportText.textContent = 'I\'ll be reporting!'; // line is only necessary if load event is changed or removed because this default text will not display while window is still listening for load event.
 
 // resize
 window.addEventListener('resize', () => {
@@ -79,7 +79,14 @@ newBtn.addEventListener('mouseout', () => {
   reportText.textContent = 'User moved the mouse out of the button!'
 });
 
-// online
-window.addEventListener('online', () => {
-  reportText.textContent = 'Window is online!';
+// load
+window.addEventListener('load', () => {
+  reportText.textContent = 'Window is loaded!';
 });
+
+// prevent default link behavior
+const stopLink = document.querySelectorAll(".nav-link");
+
+stopLink.forEach(addEventListener("click", (event) => {  
+  event.preventDefault();
+}));
